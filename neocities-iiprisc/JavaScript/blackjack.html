@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blackjack</title>
+  </head>
+  <body>
+  
+  <script>
+  // card values, array
+  var cards = 
+    [("two", 2),
+    ("three", 3),
+    ("four", 4),
+    ("five", 5),
+    ("six", 6),
+    ("seven", 7),
+    ("eight", 8),
+    ("nine", 9),
+    ("ten", 10),
+    ("king", 10),
+    ("queen", 10),
+    ("jack", 10),
+    ("ace", 1),
+    ("ace", 11)];
+    
+  alert("Blackjack");
+    
+  // select random card
+  var number = Math.trunc(Math.random() * 14);
+  var cardVal = cards[number];
+  var currentVal;
+  
+  while (true) {
+    switch (currentVal) {
+      case cardVal < 17:
+        alert("Current value: " + cardVal + "\nHit");
+        currentVal = cardVal + number;
+        break;
+      case cardVal > 17 && cardval < 21:
+        alert("Current value: " + cardVal + "\nStay");
+        break;
+      case cardVal>21:
+        alert("You lost");
+        break;
+      }
+    }
+  }
+  
+  </script>
+  
+  </body>
+</html>

@@ -1,0 +1,14 @@
+div {
+  padding:20px;
+  background-color:rgb(48, 68, 90);
+  font-family: Helvetica, sans-serif;
+  color:white;
+}
+
+div:first-child {
+  margin-top:10px;
+}
+
+.desc {
+  font-size:12px; 
+}
