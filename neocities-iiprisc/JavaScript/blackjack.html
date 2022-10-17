@@ -30,9 +30,8 @@
   var cardVal = cards[number];
   var currentVal = cardVal;
   
-  for (currentVal < 17) {
-    alert("Current value: " + currentVal + "\nStay");
-    currentVal = currentVal + cardVal;
+  for (; currentVal < 17; currentVal = currentVal + cardVal) {
+    alert("Current value: " + currentVal + "\nHit");
   }
 
   </script>
