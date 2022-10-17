@@ -30,22 +30,15 @@
   var cardVal = cards[number];
   var currentVal;
   
-  while (true) {
-    switch (currentVal) {
-      case cardVal < 17:
-        alert("Current value: " + cardVal + "\nHit");
-        currentVal = cardVal + number;
-        break;
-      case cardVal > 17 && cardval < 21:
-        alert("Current value: " + cardVal + "\nStay");
-        break;
-      case cardVal>21:
-        alert("You lost");
-        break;
-      }
-    }
+  if (cardVal < 17) {
+    alert("Current value: " + vardVal + "\nHit");
+    currentVal = cardVal + number;
+  } else if (cardVal > 17 && cardVal < 21) {
+    alert("Current value: " + cardVal + "\nStay");
   }
-  
+
+  alert(currentVal);
+
   </script>
   
   </body>
