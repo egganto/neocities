@@ -30,9 +30,10 @@
   var cardVal = cards[number];
   var currentVal = cardVal;
   
-  for (; ; currentVal = currentVal + cardVal) {
+  for (currentVal; ;) {
     if (currentVal < 17) {
       alert("Current value: " + currentVal + "\nHit");
+      currentVal = currentVal + number;
     } else if (currentVal > 17 && currentVal < 21) {
       alert("Current value: " + currentVal + "\nStay\nYou win!");
       break;
