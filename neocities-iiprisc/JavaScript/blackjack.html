@@ -28,16 +28,12 @@
   // select random card
   var number = Math.trunc(Math.random() * 14);
   var cardVal = cards[number];
-  var currentVal;
+  var currentVal = cardVal;
   
-  if (cardVal < 17) {
-    alert("Current value: " + vardVal + "\nHit");
-    currentVal = cardVal + number;
-  } else if (cardVal > 17 && cardVal < 21) {
-    alert("Current value: " + cardVal + "\nStay");
+  for (currentVal < 17) {
+    alert("Current value: " + currentVal + "\nStay");
+    currentVal = currentVal + cardVal;
   }
-
-  alert(currentVal);
 
   </script>
   
