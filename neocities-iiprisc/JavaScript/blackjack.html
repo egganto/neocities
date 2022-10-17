@@ -7,20 +7,29 @@
   
 
   <script>
+  
+  function randInt (max) {
+    return Math.floor(Math.random() * cards.length);
+  }
+
+  function randEntry (cards) {
+    return cards[randInt(cards.length)];
+  }
+
   // card values, array
-  var cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 1, 11];
+  const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 1, 11];
     
   alert("Welcome to Blackjack");
     
   // select random card
-  var number = Math.floor(Math.random() * cards.length);
-  var cardVal = cards[number];
-  var currentVal = currentVal + cardVal;
+  let currentVal = 0;;
   
-  for (let currentVal = 0; ;) {
+  for (;;) {
+    const number = randEntry(cards);
+    currentVal += number;
+
     if (currentVal < 17) {
       alert("Current value: " + currentVal + "\nHit\n");
-      currentVal = currentVal + cardVal;
     } else if (currentVal > 17 && currentVal < 21) {
       alert("Total: " + currentVal + "\nStay\n");
       break;
