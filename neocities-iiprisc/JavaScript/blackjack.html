@@ -5,40 +5,27 @@
   </head>
   <body>
   
+
   <script>
   // card values, array
-  var cards = 
-    [("two", 2),
-    ("three", 3),
-    ("four", 4),
-    ("five", 5),
-    ("six", 6),
-    ("seven", 7),
-    ("eight", 8),
-    ("nine", 9),
-    ("ten", 10),
-    ("king", 10),
-    ("queen", 10),
-    ("jack", 10),
-    ("ace", 1),
-    ("ace", 11)];
+  var cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 1, 11];
     
-  alert("Blackjack");
+  alert("Welcome to Blackjack");
     
   // select random card
-  var number = Math.trunc(Math.random() * 14);
+  var number = Math.floor(Math.random() * cards.length);
   var cardVal = cards[number];
-  var currentVal = cardVal;
+  var currentVal = currentVal + cardVal;
   
-  for (currentVal; ;) {
+  for (let currentVal = 0; ;) {
     if (currentVal < 17) {
-      alert("Current value: " + currentVal + "\nHit");
-      currentVal = currentVal + number;
+      alert("Current value: " + currentVal + "\nHit\n");
+      currentVal = currentVal + cardVal;
     } else if (currentVal > 17 && currentVal < 21) {
-      alert("Current value: " + currentVal + "\nStay\nBlackjack!!");
+      alert("Total: " + currentVal + "\nStay\n");
       break;
     } else if (currentVal > 21) {
-      alert("Current value: " + currentVal + "\nHit\nBusted! :P");
+      alert("Current value: " + currentVal + "\nHit\nBusted! :P\n");
       break;
     }
   }
