@@ -6,25 +6,30 @@
 <body>
 
 <script>
-	const weekday = [`sunday`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`];
+	const weekday = [`monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`];
+	const weekNumber = [1, 2, 3, 4, 5, 6, 7];
 
-	const d= new Date();
+	const d = new Date();
+	let numberDay = weekNumber[d.getDay()];
 	let day = weekday[d.getDay()];
 
-	let tilMonday = 
-	let tilWeekend =
+	let hour = new Date();
+	let today = 24 - hour.getHours();
+
+	let tilMonday = ((2 - parseInt(numberDay)) * 24) + today;
+	let tilWeekend = ((6 - parseInt(numberDay)) * 24) + today;
 
 	function waiting(){
-		if (day == `sunday` || day == `saturday`){
-				alert(`today is a weekend. it's ${day}`);
-				alert(`there are ${tilMonday} hours left until monday.`);
+		if (numberDay < 5){
+				return alert(`today is a school day. it's ${day}
+				\nthere are ${tilWeekend} hours left until the weekends.`);
 		} else {
-				alert(`today is a school day. it's ${day}`);
-				alert(`there are ${tilWeekend} hours left until the weekends.`);
+				return alert(`today is a weekend. it's ${day}
+				\nthere are ${tilMonday} hours left until monday.`);
 		}
-		return;
 	}
 
+	waiting();
 </script>
 
 
