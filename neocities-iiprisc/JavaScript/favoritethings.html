@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Favorite Things</title>
+</head>
+<body>
+
+<style>
+body.background {
+	background-color: aliceblue;
+}
+
+.button {
+	background-color: black;
+	text-decoration: white;
+	border: medium;
+}
+</style>
+
+<div>
+	<button class="button">laszlo</button>
+	<button class="button">nicole</button>
+	<button class="button">victor</button>
+	<button class="button">haruna</button>
+	<button class="button">naoki</button>
+</div>
+
+	<script>
+		const Person = {
+					Favorite(name, artist, show, book, food, hobby) {
+								this.personName = name;
+								this.favArtist = artist;
+								this.favShow = show:
+								this.favBook = book;
+								this.favFood = food;
+								this.favHobby = hobby;
+							}
+					Introduce() {
+								return `welcome to ${this.personName}\'s favorite things!\n
+	 their favorite artist is ${this.favArtist}; favorite show is ${favShow}; favorite book is ${favBook}; favorite food is ${favFood}; and favorite hobby is ${favHobby}`;
+							}
+				}
+
+		const laszlo = new Friend(`laszlo`, `adelen`, `the expanse`, `dune`, `rakott krumpli`, `watching youtube`);
+		const nicole = new Friend(`nicole`, `mitski`, `the fault in our stars`, `tgcf`, `cookie plate`, `playing games`);
+		const victor = new Friend(`victor`, `metric`, `steven universe`, `dr. stone`, `tamales`, `watching stars`);
+		const haruna = new Friend(`haruna`, `mi sobrino memo`, `violet evergarden`, `ice cream`, `painting digitally`);
+		const naoki = new Friend(`naoki`, `s&g`, `national geographic`, `steve jobs`, `sata andagi`, `reading books`);
+	</script>
+
+</body>
+</html>
