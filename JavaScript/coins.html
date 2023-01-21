@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Counting Coins</title>
+  </head>
+  <body>
+  
+  <script>
+  // log $1.22 (or 122)
+  var cents = 122;
+  var penny = 1;
+  var nickel = 5;
+  var dime = 10;
+  var quarter = 25;
+  
+  alert("4 different coin combinations to get " + cents + " cents");
+  
+  // 4(25) + 2(10) + 2(1)
+  alert("(4*" + quarter + " cents)(2*" + dime + " cents)(2*" + penny + " cent)=" + cents + " cents");
+  
+  // 10(10) + 4(5) + 2(1)
+  alert("(10*" + dime + " cents)(4*" + nickel + " cents)(2*" + penny + " cent)=" + cents + " cents");
+  
+  // 12(10) + 2(1)
+  alert("(12*" + dime + " cents)(2*" + penny + " cent)=" + cents + " cents");
+  
+  // 2(25) + 7(10) + 2(1)
+  alert("(2*" + quarter + " cents)(7*" + dime + "cents)(2*" + penny + " cent)=" + cents + " cents");
+  </script>
+  
+  </body>
+</html>

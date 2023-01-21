@@ -1,0 +1,152 @@
+html, body {
+  animation-name: load;
+  animation-duration: 2s;
+  font-family: Palatino Linotype;
+  font-size: 20px;
+  color: hsla(360, 18%, 22%, 1);
+  margin: 0;
+  text-align: center;
+  background: white;
+}
+
+:selection {
+  color: white;
+  background: hsla(360, 100%, 50%, 0.74);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: hsla(360, 18%, 22%, 1);
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+@keyframes hover {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+.button:hover {
+  animation-name: hover;
+  animation-duration: 1s;
+  opacity: 1;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+ul{
+  text-align:left;
+}
+
+.header {
+  background:hsla(360, 100%, 84%, 0.74);
+  padding:20px;
+}
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 25px;
+}
+
+.desc{
+  font-size: 18px;
+  color: hsla(34, 100%, 18%, 0.92);
+}
+
+.content {
+  font-size: 20px;
+  color: hsla(34, 100%, 14%, 1);
+  padding:20px;
+}
+
+@keyframes load {
+  from {opacity:0;}
+  to {opacity:1;}
+   
+}
+
+.link {
+  animation-name: load;
+  animation-duration: 6s;
+  background: url("cupcakes.jpg") no-repeat center;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 3px 1px black;
+  margin: 10px;
+  padding: 80px 150px;
+  border-radius: 30px;
+}
+
+.contact {
+  padding: 20px;
+  background: hsla(360, 18%, 22%, 1);
+  color: white;
+  font-size: 20px;
+}
+
+table, th, td, tr {
+  animation-name: load;
+  animation-duration: 4s;
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%
+}
+
+.form {
+  animation-name: load;
+  animation-duration: 8s;
+  text-align: left;
+  margin: 30px;
+  padding: 80px;
+  background-color: hsla(360, 100%, 77%, 0.74);
+  border-radius: 20px;
+}
+
+.gallery {
+  display:flex;
+  flex-flow:row wrap;
+  position: relative;
+}
+
+img {
+  width: 500px;
+  height: auto;
+  position: center;
+}
+
+.img {
+  padding:20px;
+  margin:2px;
+  width:500px;
+  height:500px;
+  border-radius:15px;
+}
+
+
+#remaining-height {
+  height: calc(100% - 100px);
+}

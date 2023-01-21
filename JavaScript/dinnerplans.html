@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dinner plans</title>
+</head>
+<body>
+
+
+	<h1>dinner plans</h1>
+	<hr/>
+	<table>
+        <tr>
+            <th>name</th>
+            <th>slices</th>
+            <th>acceptable toppings</th>
+        </tr>
+        <tr>
+            <td>jane</td>
+            <td>2</td>
+            <td>mushroom, onion, peppers, olives</td>
+        </tr>
+        <tr>
+            <td>lisa</td>
+            <td>3</td>
+            <td>pepperoni, ham, pineapple</td>
+        </tr>
+        <tr>
+            <td>taylor</td>
+            <td>3</td>
+            <td>extra cheese, pepperoni, sausage, bacon</td>
+        </tr>
+        <tr>
+            <td>chris</td>
+            <td>2</td>
+            <td>mushroom, sausage, bacon, ham, onion, peppers</td>
+        </tr>
+        <tr>
+            <td>alyssa</td>
+            <td>1</td>
+            <td>pepperoni, bacon</td>
+        </tr>
+        <tr>
+            <td>will</td>
+            <td>2</td>
+            <td>extra cheese, sausage, bacon, onion, peppers, olives</td>
+        </tr>
+        <tr>
+            <td>jessice</td>
+            <td>2</td>
+            <td>pepperoni, bacon, ham, pineapple, onion, peppers</td>
+        </tr>
+    </table>
+		<br/>
+		<form>
+			who's coming for dinner? <input type="text" name="visitor" id="visitor" required>
+			<input type="submit" value="order pizza" onclick="orderPizza()">
+		</form>
+
+		<script>
+			function visitors(name, slices, toppings){
+							this.vName = name;
+							this.pizzaSlices = slices;
+							this.pizzaToppings = toppings;
+						}
+			const jane = new visitors(`jane`, 2, ["mushroom", "onion", "peppers", "olives"]);
+			const lisa = new visitors(`lisa`, 3, ["pepperoni", "ham", "pineapple"]);
+			const taylor = new visitors(`taylor`, 3, ["extra cheese", "pepperoni", "sausage", "bacon"]);
+			const chris = new visitors(`chris`, 2, ["mushroom", "sausage", "bacon", "ham", "onion", "peppers"]);
+			const alyssa = new visitors(`alyssa`, 1, ["pepperoni", "bacon"]);
+			const will = new visitors(`will`, 2, ["mushroom", "sausage", "bacon", "ham", "onion", "peppers"]);
+			const jessice = new visitors(`jessice`, 2, ["pepperoni", "bacon", "ham", "pineapple", "onion", "peppers"]);
+
+
+			function orderPizza(){
+				let pizzaSlices = 0;
+				let pizzaToppings = "";
+				let visitor = document.getElementById("visitor").value.split(", ");
+				console.log(visitor);
+				
+					for (let j = 0; j < visitor.length; j++){
+						for (let i = 0; i <= visitor.length; i++){
+							if (visitor[i]===`jane`){
+									pizzaSlices += jane.pizzaSlices;
+									pizzaToppings += jane.pizzaToppings;
+							} else if (visitor[i]===`lisa`){
+									pizzaSlices += lisa.pizzaSlices;
+									pizzaToppings += lisa.pizzaToppings;
+							} else if (visitor[i]===`taylor`){
+									pizzaSlices += taylor.pizzaSlices;
+									pizzaToppings += taylor.pizzaToppings;
+							} else if (visitor[i]===`chris`){
+									pizzaSlices += chris.pizzaSlices;
+									pizzaToppings += chris.pizzaToppings;
+							} else if (visitor[i]===`alyssa`){
+									pizzaSlices += alyssa.pizzaSlices;
+									pizzaToppings += alyssa.pizzaToppings;
+							} else if (visitor[i]===`will`){
+									pizzaSlices += will.pizzaToppings;
+									pizzaToppings += will.pizzaToppings;
+							} else if (visitor[i]===`jessice`){
+									pizzaSlices += jessice.pizzaSlices;
+									pizzaToppings += jessice.pizzaToppings;
+							}
+				}
+				return alert(`${pizzaSlices} pizza slices with ${pizzaToppings} toppings will be ordered`);
+			}
+		}
+			
+		</script>
+
+<style>
+.table {
+	border: solid;
+	border-collapse: collapse;
+}
+</style>
+</body>
+</html>
+

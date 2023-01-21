@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Imitation</title>
+  </head>
+  <body>
+  <style>
+  div.penguins {
+    background-image:url(penguins.jpg);
+    width:450px;
+    height:300px;
+    border:1px solid black;
+    border-radius:70%;
+    filter:sepia(50%);
+  }
+  
+  div.football {
+    background-image:url(football_field.jpg);
+    background-clip:content-box;
+    width:500px;
+    height:230px;
+    border: solid 50px;
+    border-image:url(tic-tac-toe.png) 48 round;
+    filter:saturate(0%);
+  }
+  
+  div.dinosaur {
+    background-image:url(dinosaur.png);
+    width:450px;
+    height:500px;
+    filter:hue-rotate(85deg) drop-shadow(18px 1px 5px #000000); 
+  }
+  
+  div.seagull {
+    background-image:url(seagull.png), linear-gradient(125deg, #9b8aff, white);
+    width:580px;
+    height:400px;
+  }
+  
+  div.butterfly {
+    background-image:url(butterfly.jpg);
+    width:400px;
+    height:240px;
+    border-radius: 50px 0px 50px 0px;
+    filter:invert(100%) opacity(70%);
+  }
+  
+  div.theater {
+    text-align:center;
+    text-shadow:5px 5px black;
+    font-size:49px;
+    font-family: Arial;
+    color:white;
+    background-image:url(theater_stage.jpg);
+    background-origin:content-box;
+    width:400px;
+    height:350px;
+    filter:blur(3px);
+  }
+  </style>
+  
+  <div class="penguins"></div>
+  <br/>
+  <div class="football"></div>
+  <br/>
+  <div class="dinosaur"></div>
+  <br/>
+  <div class="seagull"></div>
+  <br/>
+  <div class="butterfly"></div>
+  <br/>
+  <div class="theater">
+  <br/>
+  <br/>
+  <br/>
+  Presenting</div>
+  
+  </body>
+</html>

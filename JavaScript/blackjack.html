@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blackjack</title>
+  </head>
+  <body>
+  
+
+  <script>
+  
+  function randInt (max) {
+    return Math.floor(Math.random() * cards.length);
+  }
+
+  function randEntry (cards) {
+    return cards[randInt(cards.length)];
+  }
+
+  // card values, array
+  const cards = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 1, 11];
+    
+  alert("Welcome to Blackjack");
+    
+  // select random card
+  let currentVal = 0;;
+  
+  for (;;) {
+    const number = randEntry(cards);
+    currentVal += number;
+
+    if (currentVal < 17) {
+      alert("Current value: " + number + "\nTotal: " + currentVal + "\nHit\n");
+    } else if (currentVal > 17 && currentVal < 21) {
+      alert("Current value: " + number + "\nTotal: " + currentVal + "\nStay\n");
+      break;
+    } else if (currentVal > 21) {
+      alert("Current value: " + number + "\nTotal: " + currentVal + "\nHit\nBusted! :P\n");
+      break;
+    }
+  }
+
+
+  </script>
+  
+  </body>
+</html>
