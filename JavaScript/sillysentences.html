@@ -4,24 +4,33 @@
   <body style="text-align: center; background-color: #fff5cc">
     <h1>Silly Sentences</h1>
     <hr/>
-    <fieldset style="display: inline-block">
+    <fieldset id="content" style="display: inline-block">
       <legend>type in some words!</legend>
-      <input placeholder="adjective"></input><br/>
-      <input placeholder="verb"></input><br/>
-      <input placeholder="verb"></input><br/>
-      <input placeholder="verb"></input><br/>
-      <input placeholder="noun"></input><br/>
-      <input placeholder="noun"></input><br/>
-      <input placeholder="adjective"></input><br/>
+      <input class="word" placeholder="adjective"></input><br/>
+      <input class="word" placeholder="adverb"></input><br/>
+      <input class="word" placeholder="verb"></input><br/>
+      <input class="word" placeholder="verb"></input><br/>
+      <input class="word" placeholder="noun"></input><br/>
+      <input class="word" placeholder="noun"></input><br/>
+      <input class="word" placeholder="adjective"></input><br/>
       <br/>
-      <input type="submit" value="reveal story">
-    </fieldset> 
+      <input type="submit" value="reveal story" onclick="showStory()">
+    </fieldset>
 
-    <script>  
-      // On a chilly Sunday morning, on the breakfast table, lays a ~cold~ pancake on a round plate. The unexpected happened.
-      // The pancake ~sat down~ on this plate and started ~speaking~.
-      // It then started ~approaching~ the tall bottle of ~syrup~,
-      // which opens its ~eyes~ widely in response to the ~flat~ pancake's actions. What a strange morning...
+    <script>
+      function showStory() {
+        // let word = document.getElementsByClassName("word").value;
+        let silly = `
+          On a chilly Sunday morning, on the breakfast table, lays a ${document.getElementsByClassName("word")[0].value} pancake on a round plate.  
+          The unexpected happened. The pancake ${document.getElementsByClassName("word")[1].value} on this plate 
+          and started ${document.getElementsByClassName("word")[2].value}. 
+          It then started ${document.getElementsByClassName("word")[3].value} 
+           the tall bottle of ${document.getElementsByClassName("word")[4].value},
+           which opens its ${document.getElementsByClassName("word")[5].value} widely 
+          in response to the ${document.getElementsByClassName("word")[6].value} pancake's actions. What a strange morning...`
+
+        document.getElementById("content").innerHTML = silly;
+      }
     </script>
   </body>
 </html>
