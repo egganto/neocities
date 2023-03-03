@@ -1,0 +1,30 @@
+#themes {
+  position: sticky;
+  bottom: 10px;
+}
+
+button {
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
+}
+
+#default {
+  border-color: black;
+  background-color: white;
+}
+
+#black {
+  border-color: white;
+  background-color: black;
+}
+
+#caramel {
+  border-color: darkred;
+  background-color: khaki;
+}
+
+#dark {
+  border-color: white;
+  background-color: darkslateblue;
+}
