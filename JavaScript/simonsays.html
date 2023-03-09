@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>simon says</title>
+  </head>
+  <body>
+<style>
+body {
+  text-align: center;
+  font-family: cursive;
+  color: white;
+  background-color: black;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.choices {
+  margin: 20px;
+  height: 100px;
+  width: 100px;
+  border-radius: 15%;
+}
+
+.hidden {
+  display: none;
+}
+
+#box1 {
+  background-color: orange;
+}
+
+#box2 {
+  background-color: navy;
+}
+
+#box3 {
+  background-color: ivory;
+}
+
+#box4 {
+  background-color: lime;
+}
+
+#box5 {
+  background-color: purple;
+}
+
+#box6 {
+  background-color: crimson;
+}
+
+#update {
+  font-size: 25px;
+}
+</style>
+
+    <h1>simon says</h1>
+    <hr/>
+
+    <div class="options">
+      <div class="choices" id="box1"></div>
+      <div class="choices" id="box2"></div>
+      <div class="hidden" id="box3"></div>
+      <div class="hidden" id="box4"></div>
+      <div class="hidden" id="box5"></div>
+      <div class="hidden" id="box6"></div>
+    </div>
+
+    <p id="update">click on a square.</p>
+
+    <script type="text/javascript" src="simonsays.js"></script>
+  </body>
+</html>
