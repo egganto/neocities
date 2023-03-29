@@ -1,15 +1,13 @@
-const time = new Date();
-const h = currentTime.getHours();
-const m = currentTime.getMinutes();
-const s = currentTime.getSeconds();
-const diem = "AM";
-
 function updateTime() {
+  const time = new Date();
+  let h = time.getHours();
+  let m = time.getMinutes();
+  let s = time.getSeconds();
+  let diem = "AM";
 
   if (h == 0) {
     h = 12;
-  }
-  else if (h > 12) {
+  } else if (h > 12) {
     h = h - 12;
     diem = "PM";
   }
@@ -23,10 +21,9 @@ function updateTime() {
     s = "0" + s;
   }
 
-  const DigiClock = document.getElementById("DigiClock");
+  let DigiClock = document.getElementById("DigiClock");
   DigiClock.textContent = h + ":" + m + ":" + s + " " + diem;
-  setTimeout('updateTime()', 1000);
+  setTimeout("updateTime()", 1000);
 }
 
-alert("hi");
 updateTime();
