@@ -1,0 +1,17 @@
+body {
+  background-color: cornflowerblue;
+  font-family: "JetBrains Mono";
+  font-size: 22px;
+}
+
+img {
+  width: 300px;
+}
+
+#menu {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
